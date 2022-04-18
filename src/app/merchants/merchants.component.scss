@@ -1,0 +1,118 @@
+.mat-paginator{
+    background-color: #1c5dd600;
+    
+}
+
+.icon{
+    fill: white;
+    width: 40px;
+    height: 25px;
+    transform: scale(1.25);
+
+}
+.iconm{
+    height: 10px;
+    transform: scale(1.25);
+}
+
+.logo{
+    font-size: 25px;
+}
+
+.tB{
+    margin-bottom: 10%;
+    
+}
+
+.toolBar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    width: 100% !important;
+    height: 6%;
+    color: #1a1a1a;
+    background-color: #f79a2f;
+}
+
+.add_button{
+    background-color: #f79a2f;
+    color: #000;
+}
+
+.icons{
+    color:#ff7300;
+}
+
+.student-table{
+    width: 100%; 
+    background-color: #1c5dd600;  
+}
+
+.global{
+    background-color: #d8e0e7fa;
+}
+
+// Large devices (desktops, less than 1200px)
+@media(max-width:1199.98px){}
+// Medium devices (tablets, less than 992px)
+@media(max-width:991.98px){}
+// Small devices (landscape phones, less than 768px)
+@media(max-width:767.98px){}
+// Extra small devices (portrait phones, less than 576px)
+@media(max-width:599.98px){
+    .text{
+        font-size: 50px;
+    }
+
+    .content{
+        width: 100%;
+        height: 50%;
+    }
+
+    .kart{
+        height: 100%;
+    }
+    
+    .mat-column-merchantCode{
+        font-size: xx-large;
+        width: 40%;
+        
+    }
+}
+//responsive design
+
+
+.mat-column-merchantCode {
+    
+    flex-basis: 25%;
+    //flex-grow: 1;
+    //flex-shrink: 1;
+    width: 25%;
+    
+}
+
+.mat-column-displayName {
+    flex-basis: 20%;
+    width: 20%;
+}
+
+.mat-column-fullName {
+    flex-basis: 30%;
+    width: 30%;
+}
+
+.mat-column-actions {
+    flex-basis: 10%;
+    width: 10%;
+}
+
+.mat-column-details {
+    flex-basis: 10%;
+    width: 10%;
+}
+
+.mat-column-delete {
+    flex-basis: 10%;
+    width: 10%;
+}

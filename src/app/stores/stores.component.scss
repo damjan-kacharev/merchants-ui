@@ -1,0 +1,95 @@
+.tB{
+    margin-bottom: 10%;
+}
+
+.logo{
+    font-size: 25px;
+}
+
+.details{
+    font-size: 20px;
+    color: black;
+    font-family:  sans-serif;
+    
+}
+
+.icon{
+    height: 10px;
+    transform: scale(1.25);
+    margin-right: 5px;
+}
+
+.toolBar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    width: 100% !important;
+    height: 6%;
+    color: #1a1a1a;
+    background-color: #f79a2f;
+}
+
+.global{
+    background-color: #d8e0e7fa;
+  
+}
+
+.inv{
+    background-color: #1a1a1a00;
+}
+
+.add_button{
+    background-color: #f79a2f;
+    color: #000;
+}
+
+.icons{
+    color:#ff7300;
+}
+
+.student-table{
+    width: 100%;
+    
+}
+
+.example-card{
+    width: 80%;
+    margin-bottom: 20px;
+}
+
+.example-card-stores{
+    width: 80%;
+    margin-bottom: 15px;
+}
+
+
+.mat-column-storeCode {
+    flex-basis: 20%;
+    width: 30%;
+}
+
+.mat-column-displayName {
+    flex-basis: 20%;
+    width: 25%;
+}
+
+.mat-column-merchantCode {
+    flex-basis: 20%;
+    width: 30%;
+}
+
+.mat-column-actions {
+    flex-basis: 20%;
+    width: 10%;
+}
+
+.mat-column-details {
+    flex-basis: 20%;
+    width: 5%;
+}
+
+.footer{
+    width: 20px;
+    color:#1a1a1a00
+}

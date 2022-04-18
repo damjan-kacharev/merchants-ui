@@ -1,0 +1,84 @@
+<h3 mat-dialog-title>Add New Merchant</h3>
+<mat-dialog-content class="dialog">
+  <div>
+  <mat-form-field appearance="fill" class="together">
+    <mat-label>Merchant Code</mat-label>
+    <input matInput [formControl]="merchantCodeFormControl">
+    <mat-icon matSuffix >vpn_key</mat-icon>
+    <mat-error *ngIf="merchantCodeFormControl.hasError('required')">
+      Merchant code is <strong>required</strong>
+    </mat-error>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill" class="together">
+    <mat-label>Phone Number</mat-label>
+    <input matInput [formControl]="phoneNumberFormControl">
+    <mat-icon matSuffix >phone</mat-icon>
+  </mat-form-field>
+  </div>
+
+  <div>
+  <mat-form-field appearance="fill" class="input">
+    <mat-label>Name</mat-label>
+    <input matInput [formControl]="displayNameFormControl">
+    <mat-icon matSuffix >account_circle</mat-icon>
+  </mat-form-field>
+  </div>
+
+  <div>
+  <mat-form-field appearance="fill" class="input">
+    <mat-label>Full Name</mat-label>
+    <input matInput [formControl]="fullNameFormControl">
+    <mat-icon matSuffix >assignment_ind</mat-icon>
+    <mat-error *ngIf="fullNameFormControl.hasError('required')">
+      Full name is <strong>required</strong>
+    </mat-error>
+  </mat-form-field>
+  </div>
+  <div>
+  <mat-form-field appearance="fill" class="together">
+    <mat-label>Address</mat-label>
+    <input matInput [formControl]="addressFormControl">
+    <mat-icon matSuffix >home</mat-icon>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill" class="together">
+    <mat-label>City</mat-label>
+    <mat-icon matSuffix >location_city</mat-icon>
+    <input matInput [formControl]="cityFormControl">
+  </mat-form-field>
+</div>
+<div>
+  <mat-form-field appearance="fill" class="together">
+    <mat-label>Email</mat-label>
+    <input matInput [formControl]="emailFormControl">
+    <mat-icon matSuffix >contact_mail</mat-icon>
+    <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+      Please enter a valid email address
+    </mat-error>
+    <mat-error *ngIf="emailFormControl.hasError('required')">
+      Email is <strong>required</strong>
+    </mat-error>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill" class="together">
+    <mat-label>Website</mat-label>
+    <input matInput [formControl]="websiteFormControl">
+    <mat-icon matSuffix >public</mat-icon>
+  </mat-form-field>
+</div>
+<div>
+  <mat-form-field appearance="fill" class="input">
+    <mat-label>Account Number</mat-label>
+    <input matInput [formControl]="accountNumberFormControl">
+    <mat-icon matSuffix >badge</mat-icon>
+    <mat-error *ngIf="accountNumberFormControl.hasError('required')">
+      Account number is <strong>required</strong>
+    </mat-error>
+  </mat-form-field>
+</div>
+</mat-dialog-content>
+<mat-dialog-actions class="actions">
+  <button mat-button mat-dialog-close color="warn" class="close">Close</button>
+  <button mat-button (click)="createMerchant()" color="primary" class="add">Add Merchant</button>
+</mat-dialog-actions>

@@ -1,0 +1,67 @@
+<h3 mat-dialog-title>Add New Store</h3>
+<mat-dialog-content class="dialog">
+  <div>
+    <mat-form-field appearance="fill" class="storeCode">
+      <mat-label>Store Code</mat-label>
+      <input matInput [formControl]="storeCodeFormControl">
+      <mat-icon matSuffix >vpn_key</mat-icon>
+      <mat-error *ngIf="storeCodeFormControl.hasError('required')">
+        Store code is <strong>required</strong>
+      </mat-error>
+    </mat-form-field>
+  </div>
+
+  <div>
+
+    <mat-form-field appearance="fill" class="input">
+      <mat-label>Name</mat-label>
+      <input matInput [formControl]="displayNameFormControl">
+      <mat-icon matSuffix >account_circle</mat-icon>
+      <mat-error *ngIf="displayNameFormControl.hasError('required')">
+        Name is <strong>required</strong>
+      </mat-error>
+    </mat-form-field>
+    <mat-form-field appearance="fill" class="together">
+      <mat-label>Phone Number</mat-label>
+      <input matInput [formControl]="phoneNumberFormControl">
+      <mat-icon matSuffix >phone</mat-icon>
+    </mat-form-field>
+
+  </div>
+
+  <div>
+
+    <mat-form-field appearance="fill" class="input">
+      <mat-label>Address</mat-label>
+      <input matInput [formControl]="addressFormControl">
+      <mat-icon matSuffix >home</mat-icon>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill" class="together">
+      <mat-label>City</mat-label>
+      <input matInput [formControl]="cityFormControl">
+      <mat-icon matSuffix >location_city</mat-icon>
+    </mat-form-field>
+
+  </div>
+
+  <div>
+    <mat-form-field appearance="fill" class="email">
+      <mat-label>Email</mat-label>
+      <input type="email" matInput [formControl]="emailFormControl" placeholder="Ex. pat@example.com">
+      <mat-icon matSuffix >contact_mail</mat-icon>
+      <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+        Please enter a valid email address
+      </mat-error>
+      <mat-error *ngIf="emailFormControl.hasError('required')">
+        Email is <strong>required</strong>
+      </mat-error>
+    </mat-form-field>
+  </div>
+
+  
+</mat-dialog-content>
+<mat-dialog-actions class="actions" align="end">
+  <button mat-button mat-dialog-close color="warn" class="close">Close</button>
+  <button mat-button (click)="createStore()" color="primary" class="add">Add Store</button>
+</mat-dialog-actions>

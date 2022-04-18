@@ -1,0 +1,108 @@
+.tB{
+    margin-bottom: 10%;
+}
+
+.toolBar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    width: 100% !important;
+    height: 6%;
+    color: #1a1a1a;
+    background-color: #f79a2f;
+}
+
+.back{
+    background-color: #1a1a1a;
+    color: white;
+    
+}
+
+.flex-item{
+    margin: 10px;
+    margin-left: 0;
+}
+
+.update{
+    background-color: #f79a2f;
+    color: #000;
+    margin-left: 5px;
+}
+
+.inner{
+    background-color: #ffffff59;
+}
+
+.global{
+    background-color: #d8e0e7fa;
+    width: 75%;
+}
+
+.logo{
+    font-size: 25px;
+}
+
+.details{
+    font-size: 20px;
+    color: black;
+    font-family:  sans-serif Impact;
+    
+}
+
+.icon{
+    height: 10px;
+    transform: scale(1.25);
+    margin-right: 5px;
+}
+
+.card{
+    width: 98%;
+}
+
+
+.title{
+    margin-bottom: 4%;
+}
+
+.email{
+    width: 47.2%;
+    margin-right: 15px;
+}
+
+.mcode{
+    width: 47.2%;
+    margin-right: 15px;
+}
+
+.acnum{
+    width: 47.2%;
+}
+
+.dname{
+    margin-right: 15px;
+    width: 47.2%;
+}
+
+.fname{
+    width: 47.2%;
+}
+
+.address{
+    width: 47.2%;
+    margin-right: 15px;
+}
+
+.web{
+    width: 47.2%;
+}
+
+.num{
+    width: 47.2%;
+}
+
+.example-spacer {
+    justify-content: space-between;
+    width: auto;
+    flex: 1 1 auto;
+  }

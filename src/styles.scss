@@ -1,1 +1,26 @@
 /* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+    height: 100%;
+}
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.wrapper {
+    margin: 24px auto;
+    width: 1024px;
+    display: block;
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+html{
+    background-color: #000000d2;
+    //background-color:#96aad6 !important;
+    //color: #96aad6;
+    //color: rgb(196, 52, 52);
+}

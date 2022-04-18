@@ -1,0 +1,164 @@
+<div class="tB">
+  <mat-toolbar color="primary" class="toolBar">
+    <button mat-icon-button (click)="backToMerchants()" class="example-icon" aria-label="Example icon-button with menu icon">
+      <mat-icon>arrow_back</mat-icon>
+    </button>
+    <span class="logo">Merchant</span>
+    <span class="example-spacer"></span>
+  </mat-toolbar>
+</div>
+
+<div align="center">
+<mat-card class="global" align="start">
+  <mat-card-title class="title">Merchant Manager</mat-card-title>
+  <mat-tab-group dynamicHeight mat-align-tabs="start" color="warn">
+
+    <mat-tab label="Merchant Details" >
+
+      <mat-card class="inner" align="start">
+        <!-- <div [innerHTML]="detailsText" class="details"></div> -->
+
+        <div class="flex-container" fxLayout="row">
+          <mat-icon class="icon">vpn_key</mat-icon>
+          <h2>Merchant code: {{merchantCode}}</h2>
+        </div>
+
+        <div class="flex-container" fxLayout="row">
+          <mat-icon class="icon">account_circle</mat-icon>
+          <h2>Display name: {{displayName}}</h2>
+        </div>
+
+        <div class="flex-container" fxLayout="row">
+          <mat-icon class="icon">assignment_ind</mat-icon>
+          <h2>Full name: {{fullName}}</h2>
+        </div>
+
+        <div class="flex-container" fxLayout="row">
+          <mat-icon class="icon">home</mat-icon>
+          <h2>Address: {{address}}</h2>
+        </div>
+
+        <div class="flex-container" fxLayout="row">
+          <mat-icon class="icon">phone</mat-icon>
+          <h2>Phone number: {{phoneNumber}}</h2>
+        </div>
+
+        <div class="flex-container" fxLayout="row">
+          <mat-icon class="icon">contact_mail</mat-icon>
+          <h2>Email: {{email}}</h2>
+        </div>
+
+        <div class="flex-container" fxLayout="row">
+          <mat-icon class="icon">public</mat-icon>
+          <h2>Website: {{website}}</h2>
+        </div>
+
+        <div class="flex-container" fxLayout="row">
+          <mat-icon class="icon">badge</mat-icon>
+          <h2>Account Number: {{accountNumber}}</h2>
+        </div>
+
+      <div align="end">
+        <button mat-button (click)="backToMerchants()" class="back">Back</button>
+      </div>
+    </mat-card>
+
+
+    </mat-tab>
+
+    <mat-tab label="Merchant Update">
+      <mat-card class="card inner" align="start">
+        <mat-card-content >
+
+          <div>
+          <mat-form-field appearance="fill" class="mcode">
+            <mat-label>Merchant Code</mat-label>
+            <input matInput [formControl]="merchantCodeFormControl" readonly>
+            <mat-icon matSuffix >vpn_key</mat-icon>
+          </mat-form-field>
+
+          <mat-form-field appearance="fill" class="acnum">
+            <mat-label>Account Number</mat-label>
+            <input matInput [formControl]="accountNumberFormControl">
+            <mat-icon matSuffix >badge</mat-icon>
+            <mat-error *ngIf="accountNumberFormControl.hasError('required')">
+              Account number is <strong>required</strong>
+            </mat-error>
+          </mat-form-field>
+          </div>
+          <div>
+            <mat-form-field appearance="fill" class="dname">
+              <mat-label>Display Name</mat-label>
+              <input matInput [formControl]="displayNameFormControl">
+              <mat-icon matSuffix >account_circle</mat-icon>
+            </mat-form-field>
+
+            <mat-form-field appearance="fill" class="fname">
+              <mat-label>Full Name</mat-label>
+              <input matInput [formControl]="fullNameFormControl">
+              <mat-icon matSuffix >assignment_ind</mat-icon>
+              <mat-error *ngIf="fullNameFormControl.hasError('required')">
+                Full name is <strong>required</strong>
+              </mat-error>
+            </mat-form-field>
+          </div>
+          <div>
+            <mat-form-field appearance="fill" class="address">
+              <mat-label>Address</mat-label>
+              <input matInput [formControl]="addressFormControl">
+              <mat-icon matSuffix >location_city</mat-icon>
+            </mat-form-field>
+
+            <mat-form-field appearance="fill" class="num">
+              <mat-label>Phone Number</mat-label>
+              <input matInput [formControl]="phoneNumberFormControl">
+              <mat-icon matSuffix >phone</mat-icon>
+            </mat-form-field>
+          </div>
+          <div>
+            <mat-form-field appearance="fill" class="email">
+              <mat-label>Email</mat-label>
+              <input matInput [formControl]="emailFormControl">
+              <mat-icon matSuffix >contact_mail</mat-icon>
+              <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+                Please enter a valid email address
+              </mat-error>
+              <mat-error *ngIf="emailFormControl.hasError('required')">
+                Email is <strong>required</strong>
+              </mat-error>
+            </mat-form-field>
+
+            <mat-form-field appearance="fill" class="web">
+              <mat-label>Website</mat-label>
+              <input matInput [formControl]="websiteFormControl">
+              <mat-icon matSuffix >public</mat-icon>
+            </mat-form-field>
+          </div>
+          
+
+          
+
+        </mat-card-content>
+        <mat-card-actions>
+         
+          <div class="flex-container"
+                fxLayout="row"
+                fxLayoutAlign="space-between">
+          <div class="flex-item">
+          <button mat-button (click)="backToMerchants()" class="back">Back</button>
+          </div>
+
+          <div class="flex-item">
+          <button mat-button (click)="updateMerchant()" class="update">Update</button>
+          </div>
+          </div>
+
+        </mat-card-actions>
+
+
+      </mat-card>
+    </mat-tab>
+  </mat-tab-group>
+</mat-card>
+
+</div>
